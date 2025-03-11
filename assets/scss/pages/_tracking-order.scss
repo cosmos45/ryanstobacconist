@@ -1,0 +1,20 @@
+/*==========================================
+Start Tracking Order Page Wrapper
+===========================================*/
+
+.tracking-order-content {
+  @include font-noline(13);
+  line-height: 2;
+}
+
+.tracking-order-form {
+  .single-input-item {
+    input {
+      padding: 20px;
+    }
+  }
+
+  .btn {
+    padding: 20px 45px;
+  }
+}

@@ -1,0 +1,54 @@
+/*===============================
+Start Testimonial Area
+================================*/
+.testimonial-area-wrapper {
+  background-color: #f9f9f9;
+  padding: 50px 0 70px;
+
+  .testimonial-content-wrapper {
+    position: relative;
+
+    &:before {
+      content: url("../img/icons/quote.png");
+      display: inline-block;
+      margin-bottom: 23px;
+    }
+
+    .single-testimonial-wrap {
+      @include font-size(26);
+      font-family: $font-family-playfair;
+      @media #{$sm-device} {
+        @include font-size(20);
+      }
+
+      * {
+        margin-bottom: 0;
+      }
+
+      .client-name {
+        @include font-noline(13);
+        line-height: 1;
+        font-weight: 400;
+        font-family: $font-family-base;
+        margin-top: 30px;
+
+        .client-type {
+          margin-left: 25px;
+          position: relative;
+
+          &:before {
+            background-color: $black-soft;
+            @include border-radius(50%);
+            content: '';
+            position: absolute;
+            left: -16px;
+            top: 50%;
+            @include translate(0, -50%);
+            height: 5px;
+            width: 5px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,160 @@
+/*===============================
+Start About Page Wrapper
+================================*/
+#about-page-wrapper {
+  @include font-size(13);
+  line-height: 2;
+
+  h2 {
+    @include font-noline(32);
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 16px;
+
+    @media #{$sm-device} {
+      @include font-noline(18);
+      margin-bottom: 10px;
+    }
+
+    @media #{$md-device} {
+      @include font-noline(26);
+      margin-bottom: 10px;
+    }
+  }
+
+  .about-thumbnail {
+    @media #{$md-device} {
+      max-width: 40%;
+      margin: 0 auto;
+    }
+  }
+}
+
+.about-icon-list {
+  li {
+    @include font-noline(16);
+    line-height: 1;
+    font-weight: 600;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    img {
+      max-width: 30px;
+      margin-right: 15px;
+    }
+  }
+}
+
+.brand-accordion {
+  .card {
+    border: 1px solid #e7e7e7 !important;
+    @include border-radius(0);
+    margin-bottom: 15px;
+    padding: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .card-header {
+      background-color: transparent;
+      padding: 0;
+      border: none;
+
+      button {
+        font-weight: 600;
+        padding: 0;
+        @include transition(none);
+
+        &[aria-expanded='true'] {
+          color: $brand-color;
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .card-body {
+      padding: 0;
+      @include font-noline(13);
+      line-height: 2;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.provide-best-service {
+  background: url(../img/about2-bg2.jpg) center center;
+  background-size: cover;
+  padding: 85px 0;
+
+  @media #{$sm-device} {
+    padding: 47px 0;
+  }
+
+  @media #{$md-device} {
+    padding: 57px 0;
+  }
+}
+
+.best-service-list {
+  padding-left: 20px;
+  margin-bottom: 20px;
+
+  li {
+    list-style: doted;
+    color: $brand-color;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    span {
+      color: $black-soft;
+    }
+  }
+}
+
+.skills-left-area {
+  .single-skill-wrap {
+    margin-bottom: 35px;
+
+    &:last-child {
+      margin-bottom: 5px;
+    }
+
+    .skill-title {
+      @include font-noline(16);
+      font-weight: 400;
+      line-height: 1;
+      margin-bottom: 10px;
+      text-transform: capitalize;
+    }
+
+    .skillbar {
+      background-color: #E3E3E3;
+      display: block;
+      position: relative;
+
+      .skillbar-bar {
+        background-color: $black-soft;
+        height: 8px;
+        position: relative;
+        width: 0;
+
+        .skill-percent {
+          position: absolute;
+          @include font-noline(16);
+          right: -12px;
+          top: -35px;
+        }
+      }
+    }
+  }
+}

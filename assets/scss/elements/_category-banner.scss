@@ -1,0 +1,374 @@
+/*===============================
+Start Special Categories Banner
+================================*/
+.special-category-banner {
+  .special-category-header {
+    margin-bottom: 48px;
+
+    @media #{$md-device} {
+      margin-bottom: 25px;
+    }
+
+    @media #{$sm-device} {
+      margin-bottom: 15px;
+    }
+
+    .special-cate-header-content {
+      font-family: $font-family-playfair;
+      line-height: 2;
+
+      img {
+        margin-bottom: 33px;
+      }
+    }
+  }
+
+  .special-category-banner-content {
+    margin-top: -30px;
+  }
+
+  &.special-cate-bg {
+    background-image: url('../img/category/home8/h8-bg3.png'), url('../img/category/home8/h8-bg2.png');
+    background-repeat: no-repeat;
+    background-position: right top, left bottom;
+
+    @media #{$lg-device, $md-device} {
+      background-size: 200px 200px;
+    }
+
+    @media #{$sm-device} {
+      background-size: 150px 150px;
+    }
+  }
+}
+
+.single-special-banner {
+  margin-top: 30px;
+
+  .banner-thumbnail {
+    position: relative;
+    overflow: hidden;
+
+    &:after {
+      background-color: rgba($white, 0.3);
+      content: '';
+      position: absolute;
+      top: 0;
+      left: calc(-100% + 0px);
+      @include skew(-25, 0);
+      height: 100%;
+      width: 30%;
+    }
+
+    img.banner-thumb {
+      @include scale(1.1);
+      @include transition(0.4s);
+    }
+
+    .banner-cate-name {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include translate(-50%, -50%);
+      pointer-events: none;
+      width: 100%;
+
+      .banner-title {
+        @include font-noline(20);
+        color: $white;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+
+        @media #{$sm-device} {
+          @include font-noline(16);
+        }
+      }
+
+      .banner-sale {
+        display: block;
+        margin: auto;
+        @media #{$sm-device} {
+          max-width: 100px;
+        }
+      }
+
+      .btn {
+        padding: 20px 30px;
+        min-width: 180px;
+        font-weight: 600;
+        @include font-noline(12);
+        line-height: 1;
+        margin-top: 20px;
+
+        @media #{$sm-device} {
+          min-width: 120px;
+          padding: 15px 10px;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    .banner-thumbnail {
+
+      &:after {
+        left: calc(100% + 100px);
+        @include opacity(0);
+        @include transition(0.4s);
+      }
+
+      img.banner-thumb {
+        @include scale(1);
+      }
+
+      .btn {
+        background-color: $brand-color;
+      }
+    }
+  }
+
+}
+
+// Special Categories Banner // Layout Two
+.special-category-banner {
+  &.layout-two {
+    .banner-cate-name {
+      a.category-name {
+        background-color: $white;
+        @include font-noline(18);
+        line-height: 1.2;
+        color: $black-soft;
+        display: inline-block;
+        padding: 20px 45px;
+
+        @media #{$xxs-device, $lg-device} {
+          padding: 15px 30px;
+          @include font-noline(14);
+        }
+      }
+    }
+
+    // Layout Masonry index8.html
+    .masonry-category {
+      .banner-thumbnail {
+        img {
+          display: block;
+          margin: auto;
+        }
+      }
+
+      .banner-cate-name {
+        top: auto;
+        bottom: 20px;
+        @include translate(-50%, 0);
+      }
+    }
+  }
+}
+
+// Special Categories Banner // Layout Three
+.special-category-banner {
+  &.layout-three {
+    .single-special-banner {
+      .banner-thumbnail {
+        &:before {
+          background-color: rgba($black, 0.6);
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          @include opacity(0);
+          @include transition(0.4s);
+          visibility: hidden;
+          pointer-events: none;
+          height: 100%;
+          width: 100%;
+          z-index: 1;
+        }
+      }
+
+      .banner-cate-name {
+        @include opacity(0);
+        @include transition(0.4s);
+        z-index: 1;
+
+        a.category-name {
+          color: $white;
+          @include font-noline(25);
+          text-transform: capitalize;
+        }
+      }
+
+      &:hover {
+        .banner-thumbnail {
+          &:before {
+            @include opacity(1);
+            visibility: visible;
+          }
+        }
+
+        .banner-cate-name {
+          @include opacity(1);
+          visibility: visible;
+          pointer-events: visible;
+        }
+      }
+    }
+  }
+}
+
+// Special Categories Banner // Layout Four
+.special-category-banner {
+  &.layout-four {
+    margin-top: -190px;
+
+    .banner-cate-name {
+      left: 0;
+      top: auto;
+      bottom: 0;
+      @include transform(none);
+      width: auto;
+
+      a.category-name {
+        background-color: $black-soft;
+        color: $white;
+        display: block;
+        padding: 22px 60px;
+      }
+    }
+  }
+}
+
+// Special Categories Banner // Layout Five
+.special-category-banner {
+  &.layout-five {
+    .banner-cate-name {
+      left: auto;
+      right: 30%;
+      @include translate(45%, -50%);
+
+      a.category-name {
+        font-family: $font-family-playfair;
+        @include font-noline(36);
+        font-weight: 700;
+        color: $white;
+
+        @media #{$lg-device} {
+          @include font-noline(30);
+        }
+
+        @media #{$xs-device} {
+          @include font-noline(25);
+        }
+      }
+    }
+  }
+}
+
+// Special Categories Banner // Layout Six
+.special-category-banner {
+  &.layout-six {
+    .banner-cate-name {
+      position: absolute;
+      left: 40%;
+      width: auto;
+      @include translate(0, -50%);
+
+      h2 {
+        color: $white;
+        @include font-noline(72);
+        line-height: 1.2;
+        font-weight: 300;
+
+        b {
+          font-weight: 300;
+          @include opacity(0.6);
+          display: block;
+        }
+
+        @media #{$xlmax-device} {
+          @include font-noline(38);
+        }
+
+        @media #{$lg-device} {
+          @include font-noline(50);
+        }
+      }
+
+      .btn-transparent {
+        border: 1px solid $white;
+        color: $white;
+        padding: 15px 35px;
+        @include font-noline(13);
+        margin-top: 28px;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+/*===========================================
+Start Slider Categories Area / index5.html
+============================================*/
+.slider-categories-wrapper {
+  .single-slider-category {
+    .category-thumb {
+      position: relative;
+      overflow: hidden;
+
+      &:after {
+        background-color: rgba($white, 0.3);
+        content: '';
+        position: absolute;
+        top: 0;
+        right: auto;
+        left: calc(-100% + 0px);
+        @include skew(-25, 0);
+        height: 100%;
+        width: 30%;
+      }
+
+      img {
+        @include scale(1.05);
+        @include transition(0.4s);
+      }
+
+      .category-name {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        @include translate(0, -50%);
+
+        a {
+          background-color: $black-soft;
+          padding: 20px 40px;
+          color: $white;
+        }
+      }
+    }
+
+    &:hover {
+      .category-thumb {
+        &:after {
+          left: calc(100% + 100px);
+          @include opacity(0);
+          @include transition(0.4s);
+        }
+
+        img {
+          @include scale(1);
+        }
+      }
+    }
+  }
+
+  .slick-slider {
+    .slick-dots {
+      .slick-active {
+        background-color: $brand-color;
+        border-color: $brand-color;
+      }
+    }
+  }
+}

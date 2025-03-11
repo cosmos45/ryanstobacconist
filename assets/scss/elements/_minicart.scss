@@ -1,0 +1,143 @@
+/*===============================
+Start Mini Cart Wrapper
+================================*/
+.modal-minicart {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  @include translate(100%, 0);
+  @include transition(transform, 0.4s, ease);
+
+  .minicart-content-wrap {
+    background-color: $white;
+    max-width: 420px;
+    padding: 100px 50px 50px;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    @media #{$sm-device} {
+      overflow: auto;
+    }
+
+    @include transition(all, 0.4s);
+
+    h2 {
+      @include font-noline(18);
+      line-height: 1.2;
+      font-weight: 400;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+// Mini Cart Show
+.mfp-ready {
+  .modal-minicart {
+    @include translate(0, 0);
+  }
+}
+
+.minicart-product-list {
+  max-height: 300px;
+  overflow: auto;
+  margin-right: -70px;
+  padding-right: 70px;
+
+  @media #{$sm-device} {
+    padding-right: 10px;
+    margin-right: -10px;
+  }
+
+  .single-product-item {
+    position: relative;
+    margin-bottom: 30px;
+    padding-right: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .product-thumb {
+      max-width: 70px;
+      @include flex(0 0 70px);
+      margin-right: 20px;
+    }
+
+    .product-details {
+      margin-top: 10px;
+
+      .product-title {
+        @include font-noline(14);
+        font-weight: 400;
+        line-height: 1.2;
+        margin-bottom: 10px;
+
+        a {
+          color: $black-soft;
+
+          &:hover {
+            color: $brand-color;
+          }
+        }
+      }
+
+      .prod-cal {
+        @include font-noline(13);
+        font-weight: 400;
+        line-height: 1.2;
+
+        .multiplication {
+          margin: 0 5px;
+        }
+      }
+
+    }
+
+    .remove-icon {
+      @include font-noline(20);
+      color: $black-soft;
+      position: absolute;
+      right: 0;
+      top: 5px;
+
+      &:hover {
+        color: $brand-color;
+      }
+    }
+  }
+}
+
+.minicart-calculation-wrap {
+  margin-top: 38px;
+
+  .cal-title {
+    @include font-noline(13);
+  }
+
+  .cal-amount {
+    @include font-noline(18);
+    line-height: 1;
+    font-weight: 500;
+  }
+}
+
+.minicart-btn-group {
+  @media #{$sm-device, $lg-device} {
+    margin-bottom: 50px;
+  }
+
+  .btn {
+    display: block;
+
+    @media #{$sm-device} {
+      display: inline-block;
+      padding: 10px 22px;
+
+      &:last-child {
+        margin-top: 0 !important;
+      }
+    }
+  }
+}

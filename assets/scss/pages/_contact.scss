@@ -1,0 +1,61 @@
+/*============================
+Start Contact Page Wrapper
+==============================*/
+.contact-method {
+  h3 {
+    @include font-noline(36);
+    font-weight: 600;
+    margin-bottom: 42px;
+    margin-top: -5px;
+
+    @media #{$sm-device} {
+      margin-bottom: 20px;
+      @include font-noline(22);
+    }
+  }
+
+  .btn {
+    padding: 20px 50px;
+  }
+
+  .alert {
+    margin: 10px 0 0;
+
+    * {
+      margin: 0;
+    }
+  }
+}
+
+.single-contact-info {
+  color: #8d8d8d;
+  @include font-size(13);
+  margin-bottom: 45px;
+
+  @media #{$sm-device} {
+    margin-bottom: 25px;
+  }
+
+  h4 {
+    font-weight: 600;
+    @include font-noline(13);
+    line-height: 1;
+    margin-bottom: 20px;
+
+    @media #{$sm-device} {
+      margin-bottom: 10px;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.map-area-wrapper {
+  height: 350px;
+
+  #map_content {
+    height: 100%;
+  }
+}

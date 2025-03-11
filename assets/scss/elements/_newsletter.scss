@@ -1,0 +1,46 @@
+/*===============================
+Start Newsletter Area
+================================*/
+#newsletter-area-wrap {
+  background-image: url("../img/newsletterbg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  padding: 125px 0;
+
+  @media #{$md-device} {
+    padding: 60px 0;
+  }
+
+  @media #{$sm-device} {
+    padding: 50px 0;
+  }
+
+  h2 {
+    @include font-noline(36);
+    line-height: 1.2;
+    font-weight: 400;
+    margin-top: -7px;
+    margin-bottom: 0;
+
+    @media #{$sm-device} {
+      @include font-noline(26);
+    }
+  }
+
+  .newsletter-area {
+    margin-top: 22px;
+
+    input[type="email"] {
+      border: none;
+      padding: 25px 30px;
+      padding-right: 110px;
+    }
+
+    button {
+      right: 30px;
+      @include font-noline(14);
+    }
+  }
+}

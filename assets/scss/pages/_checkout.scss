@@ -1,0 +1,292 @@
+/*===============================
+Start Checkout Page Wrapper
+================================*/
+
+// Checkout Page Coupon
+.checkout-page-coupon-area {
+  .card {
+    border: none;
+    padding: 0;
+
+    h3 {
+      background-color: #eeeff2;
+      @include font-noline(13);
+      line-height: 1.2;
+      font-weight: 400;
+      margin-bottom: 0;
+      padding: 20px 30px;
+
+      i {
+        color: $green;
+        margin-right: 10px;
+      }
+
+      span {
+        cursor: pointer;
+        @include transition(0.2s);
+
+        &:hover {
+          color: $brand-color;
+        }
+      }
+    }
+
+    .card-body {
+      color: #8d8d8d;
+      @include font-size(13);
+      padding: 0;
+      margin-top: 30px;
+
+      .apply-coupon-wrapper {
+        input {
+          border: 1px solid #e7e7e7;
+          outline: none;
+          padding: 16px 20px;
+          max-width: 500px;
+          width: 100%;
+        }
+
+        button.btn {
+          padding: 16px 30px;
+          margin-left: 20px;
+
+          @media #{$sm-device} {
+            margin-left: 0;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Checkout Billing Details
+.checkout-billing-details-wrap {
+  margin-top: 50px;
+
+  @media #{$sm-device} {
+    margin-top: 30px;
+  }
+
+  h2 {
+    font-weight: 600;
+    @include font-noline(20);
+    line-height: 1;
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 46px;
+
+    @media #{$sm-device} {
+      margin-bottom: 26px;
+    }
+
+    &:before {
+      background-color: $black-soft;
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 50px;
+    }
+  }
+}
+
+// Single Input  Style
+.single-input-item {
+  @include font-noline(13);
+  color: #8d8d8d;
+  margin-bottom: 21px;
+
+  label:not(.form-check-label) {
+    @include font-noline(13);
+    color: $black-soft;
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+
+    &.required {
+      &:after {
+        content: '*';
+        color: red;
+        margin-left: 2px;
+      }
+    }
+  }
+
+  input:not(.form-check-input), textarea {
+    @include font-noline(13);
+    border: 1px solid #e7e7e7;
+    color: #8d8d8d;
+    display: block;
+    outline: none;
+    padding: 15px 20px;
+    @include transition(0.2s);
+    width: 100%;
+
+    &:focus {
+      border-color: $black-soft;
+    }
+  }
+
+  .nice-select {
+    line-height: 30px;
+    height: 50px;
+    width: 100%;
+
+    .current {
+      color: #8d8d8d;
+      font-weight: 400;
+    }
+
+    .list {
+      @include font-noline(13);
+    }
+  }
+}
+
+.checkout-box-wrap {
+  @include font-noline(13);
+  color: #8d8d8d;
+
+  .account-create, .ship-to-different {
+    display: none;
+  }
+}
+
+// Checkout Page Order Details
+.order-details-area-wrap {
+  border: 2px solid #e7e7e7;
+  padding: 50px;
+  margin-top: 50px;
+  color: #8d8d8d;
+  @include font-size(13);
+
+  @media #{$xs-device} {
+    padding: 30px 20px;
+  }
+
+  @media #{$sm-device,$md-device} {
+    margin-top: 30px;
+  }
+
+  h2 {
+    font-weight: 600;
+    @include font-noline(20);
+    line-height: 1;
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 35px;
+
+    @media #{$sm-device} {
+      margin-bottom: 26px;
+    }
+
+    &:before {
+      background-color: $black-soft;
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 50px;
+    }
+  }
+
+  .order-details-table {
+    @include font-noline(13);
+    line-height: 1;
+    white-space: nowrap;
+
+    .custom-control-label, th {
+      @include font-noline(13);
+      font-weight: 400;
+    }
+
+    .table {
+
+      thead {
+        border-bottom: 1px solid #e7e7e7;
+        margin-bottom: 27px;
+
+        th {
+          margin-bottom: 27px;
+        }
+      }
+
+      tbody {
+        border-bottom: 1px solid #e7e7e7;
+
+        .cart-item:first-child {
+          td {
+            padding-top: 30px;
+          }
+        }
+
+        .cart-item:last-child {
+          td {
+            padding-bottom: 30px;
+          }
+        }
+      }
+
+      tfoot {
+        .shipping {
+          .shipping-method {
+            li {
+              margin-bottom: 15px;
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+
+        .total-amount {
+          @include font-noline(20);
+        }
+
+        tr {
+          border-bottom: 1px solid #e7e7e7;
+        }
+      }
+
+      tr {
+        td, th {
+          padding: 15px 0;
+          color: $black;
+
+          &:last-child {
+            text-align: right;
+          }
+        }
+      }
+    }
+
+    .product-title {
+      .product-quantity {
+        color: #8d8d8d;
+        @include font-noline(14);
+      }
+    }
+  }
+
+  .order-details-footer {
+    margin-top: 16px;
+
+    .custom-control {
+      .custom-control-label {
+        @include font-size(12);
+
+        &:before {
+          top: 4px;
+        }
+
+        &:after {
+          top: 3px;
+        }
+      }
+    }
+  }
+}

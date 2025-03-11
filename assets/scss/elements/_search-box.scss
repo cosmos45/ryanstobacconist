@@ -1,0 +1,116 @@
+/*=============================
+Start Search box Wrapper
+================================*/
+.modalSearchBox {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  z-index: 1040;
+  transition: 0.5s;
+
+  .modaloverlay {
+    background-color: white;
+    cursor: url("../img/icons/cancel.png"), auto;
+    height: 100vw;
+    @include transform(scale(0) translate(0));
+    @include border-radius(50%);
+    @include opacity(0.95);
+    transition: 0.5s;
+    position: absolute;
+    right: -50vw;
+    top: -50vw;
+    width: 100vw;
+    z-index: 10;
+  }
+
+  &.modalOpen {
+    @include opacity(1);
+    pointer-events: visible;
+
+    .modaloverlay {
+      @include transform(scale(2.5) translate(-25%, 25%)) ;
+      @include opacity(0.9);
+    }
+
+    .search-box-wrapper {
+      @include translate(-50%, -50%);
+      @include opacity(1);
+      @include transition(0.5s);
+      transition-delay: 0.6s;
+    }
+  }
+
+  .search-box-wrapper {
+    @include translate(-50%, 100px);
+    @include opacity(0);
+    left: 50%;
+    text-align: center;
+    top: 50%;
+    transition-delay: 0s;
+    @include transition(0s);
+    position: absolute;
+    max-width: 800px;
+    width: 100%;
+    z-index: 1100;
+    padding: 0 20px;
+
+    p {
+      margin: 0;
+      font-weight: 300;
+      @include font-noline(18);
+      color: black;
+
+      @media #{$sm-device} {
+        @include font-noline(14);
+      }
+    }
+
+    .search-box-form {
+      margin-top: 30px;
+
+      form {
+        position: relative;
+
+        input {
+          background-color: transparent;
+          border: none;
+          border-bottom: 2px solid black;
+          @include font-noline(30);
+          font-weight: 300;
+          display: block;
+          outline: none;
+          text-align: center;
+          padding: 10px 70px 10px 10px;
+          width: 100%;
+          color: black;
+
+          &::placeholder {
+            color: black;
+            @include opacity(0.7);
+          }
+
+          &::-moz-placeholder {
+            color: black;
+            @include opacity(0.7);
+          }
+
+          @media #{$sm-device} {
+            @include font-noline(20);
+          }
+        }
+
+        button.btn-search {
+          @include font-noline(30);
+          position: absolute;
+          right: 2px;
+          top: 0;
+          height: 100%;
+          color: black;
+        }
+      }
+    }
+  }
+}

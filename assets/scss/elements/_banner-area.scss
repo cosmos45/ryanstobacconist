@@ -1,0 +1,300 @@
+/*===============================
+Start Banner Area // Home3
+================================*/
+.banner-content-wrap {
+  background-image: url("../img/banner/home3-banner-bg.jpg");
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+  padding: 180px 0;
+
+  @media #{$md-device} {
+    padding: 80px 0;
+  }
+
+  @media #{$sm-device} {
+    padding: 60px 0;
+  }
+
+  @media #{$xxs-device} {
+    [class*="col-"] {
+      max-width: 100%;
+      @include flex(0 0 100%);
+    }
+  }
+
+  .banner-content {
+    @media #{$sm-device} {
+      padding: 0 20px;
+    }
+
+    h4, h2 {
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 9px;
+    }
+
+    h4 {
+      @include font-noline(24);
+      margin-top: -5px;
+      @media #{$sm-device} {
+        @include font-noline(20);
+      }
+    }
+
+    h2 {
+      @include font-noline(120);
+      @media #{$md-device} {
+        @include font-noline(60);
+      }
+      @media #{$sm-device} {
+        @include font-noline(40);
+      }
+    }
+
+    h3 {
+      @include font-noline(24);
+      line-height: 1;
+      font-weight: 300;
+      margin-bottom: 40px;
+
+      @media #{$sm-device} {
+        margin-bottom: 25px;
+      }
+    }
+
+    .btn-transparent {
+      border-width: 2px;
+      border-color: $black-soft;
+      padding: 15px 45px;
+
+      @media #{$sm-device} {
+        padding: 10px 30px;
+      }
+
+      &:hover {
+        border-color: $brand-color;
+      }
+    }
+  }
+}
+
+/*===========================================
+Start Banner Area // Home4
+=============================================*/
+.banner-area-wrapper {
+  &.layout-two {
+    background-image: url("../img/banner/home4-banner-bg.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 145px 0;
+
+    @media #{$md-device} {
+      padding: 70px 0;
+    }
+
+    @media #{$sm-device} {
+      padding: 50px 0;
+    }
+
+    .banner-content-wrap {
+      background-image: none;
+      padding: 0;
+
+      * {
+        color: $white;
+      }
+
+      .btn-transparent {
+        border-color: $white;
+
+        &:hover {
+          border-color: $brand-color;
+        }
+      }
+    }
+  }
+}
+
+/*==========================================
+Start Summer Banner Area / index6.html
+===========================================*/
+.summer-banner-area {
+  background-image: url("../img/summer.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 200px 0;
+  position: relative;
+
+  @media #{$lg-device} {
+    padding: 130px 0;
+  }
+
+  @media #{$md-device} {
+    padding: 60px 0;
+  }
+
+  @media #{$sm-device} {
+    padding: 50px 0;
+  }
+
+  &:before {
+    background-color: rgba($black, 0.3);
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  .summer-banner-content {
+    h4, h2 {
+      text-transform: uppercase;
+      color: $white;
+    }
+
+    h4 {
+      @include font-noline(20);
+      margin-top: -5px;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+
+      @media #{$xs-device} {
+        @include font-noline(17);
+      }
+    }
+
+    h2 {
+      @include font-noline(120);
+      font-weight: 300;
+      line-height: 1;
+      margin-bottom: 0;
+
+      @media #{$md-device} {
+        @include font-noline(90);
+      }
+
+      @media #{$sm-device} {
+        @include font-noline(40);
+      }
+    }
+
+    .btn-brand {
+      background-color: $white;
+      color: $black-soft;
+      padding: 20px 60px;
+      margin-top: 83px;
+
+      @media #{$md-device} {
+        margin-top: 38px;
+      }
+
+      @media #{$sm-device} {
+        margin-top: 18px;
+        padding: 10px 25px;
+      }
+
+      &:hover {
+        background-color: $brand-color;
+        color: $white;
+      }
+    }
+  }
+
+  // Summer Banner Layout Two // index8.html
+  &.layout-two {
+    background-image: url("../img/new-summer.jpg");
+    background-attachment: scroll;
+    padding: 143px 0 160px;
+    position: relative;
+
+    @media #{$md-device} {
+      padding: 48px 0 60px;
+    }
+
+    @media #{$sm-device} {
+      padding: 45px 0 50px;
+    }
+
+    .summer-banner-content {
+      * {
+        text-transform: capitalize;
+        color: $white;
+      }
+
+      h4 {
+        font-weight: 400;
+        @include font-noline(24);
+        margin: 10px 0 40px;
+
+        @media #{$sm-device} {
+          margin: 10px 0 20px;
+        }
+      }
+
+      .btn-transparent {
+        border: 2px solid $white;
+        padding: 15px 50px;
+        display: inline-block;
+
+        &:hover {
+          border-color: $brand-color;
+        }
+      }
+    }
+  }
+
+  // Summer Banner Layout Three // index10.html
+  &.layout-three {
+    background-image: url("../img/summer-sale-bg.jpg");
+    background-attachment: scroll;
+
+    h4 {
+      @include font-noline(48);
+      font-weight: 600;
+      text-transform: capitalize;
+      margin-bottom: 28px;
+
+      @media #{$xs-device} {
+        @include font-noline(35);
+      }
+    }
+
+    img {
+      display: block;
+      margin: auto;
+
+      @media #{$sm-device} {
+        max-width: 65%;
+      }
+
+      @media #{$md-device} {
+        max-width: 45%;
+      }
+    }
+
+    .btn-brand {
+      margin-top: 50px;
+
+      @media #{$md-device} {
+        margin-top: 38px;
+      }
+
+      @media #{$sm-device} {
+        margin-top: 18px;
+        padding: 10px 25px;
+      }
+
+      &:hover {
+        background-color: $brand-color;
+        color: $white;
+      }
+    }
+  }
+
+}

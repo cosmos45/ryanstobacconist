@@ -1,0 +1,109 @@
+/*==============================
+Start Compare Page Wrapper
+=================================*/
+.compare-table {
+  & .table {
+    color: #8d8d8d;
+    @include font-size(13);
+
+    & tbody {
+      & tr {
+
+        th {
+          background-color: #f2f2f2;
+          text-align: left !important;
+        }
+
+        & td, th {
+          text-align: center;
+          padding: 20px;
+          vertical-align: middle;
+          border-color: #e7e7e7;
+
+          &.first-column {
+            min-width: 175px;
+            font-weight: 600;
+            color: $black-soft;
+            margin: 0;
+
+            @media #{$sm-device} {
+              min-width: 115px;
+            }
+          }
+
+          &.product-image-title {
+            min-width: 310px;
+            vertical-align: bottom;
+
+            @media #{$sm-device} {
+              min-width: 220px;
+            }
+
+            & .image {
+              clear: both;
+              width: 100%;
+              margin-bottom: 15px;
+              display: block;
+
+              & img {
+                max-width: 100%;
+              }
+            }
+
+            & .category {
+              display: block;
+              text-transform: capitalize;
+              letter-spacing: 0.5px;
+              color: #8d8d8d;
+              margin-bottom: 5px;
+            }
+
+            & .title {
+              color: $black-soft;
+              font-weight: 500;
+
+              &:hover {
+                color: $brand-color;
+              }
+            }
+          }
+
+          &.pro-desc {
+            & p {
+              margin: 0;
+            }
+          }
+
+          &.pro-price, &.pro-color, &.pro-stock {
+            font-weight: 400;
+          }
+
+          &.pro-remove {
+            & button {
+              border: none;
+              background-color: transparent;
+              padding: 0;
+              cursor: pointer;
+              @include transition(0.3s);
+
+              &:hover {
+                color: $red;
+              }
+
+              & i {
+                @include font-size(16);
+              }
+            }
+          }
+
+          &.pro-ratting {
+            & i {
+              color: $yellow;
+            }
+          }
+
+        }
+      }
+    }
+  }
+}

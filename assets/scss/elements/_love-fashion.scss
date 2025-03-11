@@ -1,0 +1,44 @@
+/*===============================
+Start We Love Fashion Banner
+================================*/
+.love-fashion-text {
+  color: #8d8d8d;
+
+  h2 {
+    font-family: $font-family-playfair;
+    @include font-noline(64);
+    line-height: 1.2;
+    font-weight: 400;
+    margin-bottom: 30px;
+
+    @media #{$md-device} {
+      @include font-noline(36);
+      margin-bottom: 20px;
+    }
+
+    @media #{$sm-device} {
+      @include font-noline(40);
+      margin-bottom: 10px;
+    }
+  }
+
+  .btn {
+    padding: 17px 40px;
+    margin-top: 30px;
+    @media #{$md-device} {
+      margin-top: 20px;
+    }
+    @media #{$sm-device} {
+      margin-top: 10px;
+    }
+  }
+}
+
+.love-fashion-thumbnail {
+  img {
+    @media #{$sm-device} {
+      max-width: 300px;
+      margin: auto;
+    }
+  }
+}

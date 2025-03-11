@@ -1,0 +1,144 @@
+/*==================================
+Start Left Offside Menu Wrapper
+===================================*/
+.modalLeftOffside {
+  position: fixed;
+  left: 0;
+  top: 0;
+  @include translate(-100%, 0);
+  @include transition(transform, 0.4s, ease);
+
+  .leftoffside-content-wrap {
+    background-color: $white;
+    max-width: 420px;
+    padding: 100px 50px 50px;
+    height: 100vh;
+    overflow: auto;
+  }
+}
+
+// Mini Cart Show
+.mfp-ready {
+  .modalLeftOffside {
+    @include translate(0, 0);
+  }
+}
+
+.offside-menu {
+  ul.left-offsidemenu {
+    li {
+      margin-bottom: 35px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        font-weight: 700;
+        @include font-noline(18);
+        line-height: 1;
+        color: $black-soft;
+
+        &:hover {
+          color: $brand-color;
+        }
+      }
+    }
+  }
+}
+
+.offside-text {
+  @include font-size(13);
+  margin-top: 80px;
+
+  img {
+    margin-bottom: 10px;
+  }
+
+  a {
+    display: block;
+    color: $black-soft;
+    margin-bottom: 5px;
+
+    &:hover {
+      color: $brand-color;
+    }
+  }
+}
+
+.offset-menu-footer {
+  margin-top: 10px;
+
+  .social-icons {
+    margin: 15px 0 25px;
+
+    a {
+      margin-right: 20px;
+    }
+  }
+
+  .copyright {
+    @include font-noline(11);
+  }
+}
+
+/*===========================
+Off Canvas Main Menu Start
+============================*/
+.offcanvas-mainmenu-wrapper {
+  .mainmenu {
+    display: none;
+  }
+
+  .slicknav_menu {
+    display: block;
+
+    .slicknav_btn {
+      display: none;
+    }
+
+    .slicknav_nav {
+      background-color: transparent;
+      display: block !important;
+      position: static;
+      max-height: 100%;
+      width: 250px;
+
+      @media #{$xxs-device} {
+        width: 200px;
+      }
+
+      li {
+        a {
+          color: $black-soft;
+          border: none;
+          font-weight: 700;
+          @include font-noline(18);
+
+          &:hover {
+            color: $brand-color;
+          }
+
+          .slicknav_arrow {
+            border: none;
+            font-weight: 300;
+            @include font-noline(16);
+            color: $black;
+          }
+        }
+
+        ul {
+          background-color: transparent;
+          margin-left: 15px;
+
+          li {
+            a {
+              font-weight: 400;
+              @include font-noline(14);
+            }
+          }
+        }
+      }
+    }
+  }
+}

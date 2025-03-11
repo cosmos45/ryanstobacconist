@@ -1,0 +1,37 @@
+/*==========================================
+Start Start 404 Error Page Wrapper
+===========================================*/
+#error-page-wrapper {
+  background: url(../img/404-bg.jpg) center center;
+  background-size: cover;
+  height: 100vh;
+
+  .error-page-content {
+    @include font-size(14);
+
+    h2 {
+      @include font-noline(150);
+      line-height: 1;
+      font-weight: 300;
+      margin-bottom: 15px;
+      -webkit-animation: rubberBand 1.5s forwards 0.4s;
+      animation: rubberBand 1.5s forwards 0.4s;
+
+      @media #{$sm-device} {
+        @include font-noline(100);
+      }
+    }
+
+    h5 {
+      @include font-noline(24);
+      line-height: 1;
+      font-weight: 400;
+      margin-bottom: 28px;
+    }
+
+    .btn {
+      padding: 20px 60px;
+      margin-top: 20px;
+    }
+  }
+}

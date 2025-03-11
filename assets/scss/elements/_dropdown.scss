@@ -1,0 +1,57 @@
+//===================================
+//    Dropdown Code Here
+//===================================
+
+// Dropdown Nav
+.dropdown-nav {
+  background-color: $white;
+  @include box-shadow(0 0 38px 0 rgba(41, 44, 58, 0.09));
+  pointer-events: none;
+  position: absolute;
+  visibility: hidden;
+  top: 100%;
+  left: 0;
+  width: 220px;
+  z-index: 999;
+  @include opacity(0);
+  @include transform(translateY(20px));
+  @include transition(0.2s);
+
+  &.mega-menu-wrap {
+    width: auto;
+  }
+}
+
+// Dropdown Show
+.dropdown-show {
+  position: relative;
+
+  &:hover {
+    & > .dropdown-nav {
+      pointer-events: visible;
+      visibility: visible;
+      @include opacity(1);
+      @include transform(none);
+    }
+
+    .arrow-toggle {
+      &:after {
+        @include rotate(180)
+      }
+    }
+  }
+}
+
+// Dropdown Arrow Switcher
+.arrow-toggle {
+  position: relative;
+
+  &:after {
+    content: '\f107';
+    font-family: $font-font_awesome;
+    vertical-align: middle;
+    margin-left: 5px;
+    display: inline-block;
+    @include transition(0.1s);
+  }
+}

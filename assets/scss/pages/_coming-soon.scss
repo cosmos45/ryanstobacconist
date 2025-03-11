@@ -1,0 +1,97 @@
+/*==========================================
+Start Coming Soon Page Wrapper
+===========================================*/
+#coming-soon-page-wrapper {
+  background: url(../img/coming-soon-bg.jpg) no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+
+  &:before {
+    background-color: rgba(black, 0.2);
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  .coming-soon-content-wrap {
+    color: white;
+    @include font-noline(13);
+    line-height: 2;
+
+    h2 {
+      color: white;
+      @include font-noline(90);
+      line-height: 1;
+      font-weight: 300;
+      margin-bottom: 25px;
+
+      @media #{$md-device} {
+        @include font-noline(70);
+      }
+
+      @media #{$sm-device} {
+        @include font-noline(50);
+      }
+
+      @media #{$xs-device} {
+        @include font-noline(26);
+        margin-bottom: 15px;
+      }
+    }
+
+    .btn {
+      padding: 20px 50px;
+    }
+
+    .newsletter-area {
+      input {
+        background-color: transparent;
+        color: white;
+
+        &::placeholder {
+          color: white;
+          @include font-noline(13);
+        }
+
+        &::-moz-placeholder {
+          color: white;
+          @include font-noline(13);
+          @include opacity(1);
+        }
+      }
+
+      button {
+        color: white;
+        padding: 0;
+      }
+    }
+  }
+}
+
+.coming-soon-count-down {
+  .countdown-item {
+    margin-right: 70px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @media #{$sm-device} {
+      margin-right: 30px;
+    }
+
+    .countdown-time {
+      display: block;
+      @include font-noline(40);
+      line-height: 1;
+
+      @media #{$sm-device} {
+        @include font-noline(30);
+      }
+    }
+  }
+}

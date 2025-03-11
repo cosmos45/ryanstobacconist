@@ -1,0 +1,58 @@
+/*============================
+Start FAQ Page Wrapper
+===============================*/
+.single-subject-by-faq-wrap {
+  margin-bottom: 88px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media #{$md-device} {
+    margin-bottom: 58px;
+  }
+
+  @media #{$sm-device} {
+    margin-bottom: 45px;
+  }
+
+  h3 {
+    @include font-noline(24);
+    font-weight: 600;
+    margin-bottom: 46px;
+
+    @media #{$sm-device} {
+      margin-bottom: 26px;
+    }
+  }
+
+  .brand-accordion {
+    .card {
+      .card-header {
+        button {
+          display: block;
+          position: relative;
+          text-align: left;
+          width: 100%;
+
+          &:after {
+            content: "+";
+            position: absolute;
+            right: 0;
+            @include font-noline(20);
+            color: $black-soft;
+            line-height: 1;
+            top: 50%;
+            @include transform(translateY(-50%));
+          }
+
+          &[aria-expanded="true"] {
+            &:after {
+              content: "-";
+            }
+          }
+        }
+      }
+    }
+  }
+}

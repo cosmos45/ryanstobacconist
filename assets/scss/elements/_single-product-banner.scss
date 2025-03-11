@@ -1,0 +1,73 @@
+/*===============================
+Start Single Product Banner
+================================*/
+.single-product-banner-area {
+  background-image: url('../img/product-banner/single-product-banner-1.jpg');
+  background-size: cover;
+  background-position: center center;
+  padding: 250px 0;
+
+  @media #{$md-device} {
+    padding: 100px 0;
+  }
+
+  @media #{$sm-device} {
+    padding: 60px 0;
+  }
+
+  .single-product-banner-content {
+    h2 {
+      @include font-noline(48);
+      line-height: 1.2;
+      font-weight: 400;
+      margin-top: -7px;
+
+      @media #{$lg-device} {
+        @include font-noline(36);
+      }
+
+      @media #{$md-device} {
+        @include font-noline(30);
+      }
+
+      @media #{$sm-device} {
+        @include font-noline(24);
+      }
+
+      a {
+        color: $black-soft;
+      }
+    }
+
+    .reference {
+      @include font-noline(12);
+      line-height: 1;
+    }
+
+    .price {
+      display: block;
+      @include font-noline(36);
+      line-height: 1;
+      font-weight: 300;
+      margin: 30px 0 37px;
+
+      @media #{$sm-device} {
+        @include font-noline(24);
+        margin: 15px 0 20px;
+      }
+    }
+
+    .btn-transparent {
+      border-color: $black-soft;
+      padding: 18px 60px;
+
+      @media #{$sm-device} {
+        padding: 12px 30px;
+      }
+
+      &:hover {
+        border-color: $brand-color;
+      }
+    }
+  }
+}

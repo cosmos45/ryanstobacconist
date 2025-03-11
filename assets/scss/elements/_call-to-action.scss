@@ -1,0 +1,65 @@
+/*===============================
+Start Call to Action Area
+================================*/
+.call-to-action-wrapper {
+  background-color: #f9f9f9;
+  padding: 55px 0;
+
+  .call-action-content-wrapper {
+    margin-top: -30px;
+  }
+}
+
+// Single Call to Action Item Style
+.single-call-to-action-wrap {
+  color: #8d8d8d;
+  @include font-noline(11);
+  @include align-items(center);
+  margin-top: 30px;
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  h2 {
+    @include font-noline(14);
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  .action-icon {
+    margin-right: 20px;
+    max-width: 50px;
+  }
+}
+
+// Call to Action Layout Two
+.call-to-action-wrapper {
+  &.layout-two {
+    background-color: $white;
+    padding: 74px 0;
+
+    @media #{$sm-device} {
+      padding: 50px 0;
+    }
+
+    .single-call-to-action-wrap {
+      @include font-noline(12);
+
+      h2 {
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+
+      .action-icon {
+        i {
+          @include font-noline(45);
+          line-height: 1;
+          color: $black-soft;
+        }
+      }
+    }
+  }
+}

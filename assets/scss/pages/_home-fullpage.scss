@@ -1,0 +1,139 @@
+/*===============================
+Home Page Style Left Fixed Header
+================================*/
+// Site Content Wrapper
+.site-content-wrapper {
+  position: relative;
+  padding-left: 350px;
+
+  @media #{$md-device, $sm-device} {
+    padding-left: 0;
+  }
+
+  @media #{$lg-device} {
+    padding-left: 250px;
+  }
+
+  // Custom Container Fluid
+  .container-fluid {
+    padding: 0 65px;
+
+    @media #{$sm-device, $md-device, $lg-device} {
+      padding: 0 15px;
+    }
+  }
+
+  // Summer Banner Area
+  .summer-banner-area {
+    &.hero-banner {
+      @media #{$lg-device,$xl-device} {
+        height: 100vh;
+      }
+    }
+
+    .summer-banner-content {
+      h2 {
+        @media #{$lg-device} {
+          @include font-noline(80);
+        }
+        @media #{$xlmax-device} {
+          @include font-noline(100);
+        }
+      }
+
+      .btn {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  // Special Category Banner
+  .special-category-banner {
+    &.layout-six {
+      .banner-cate-name {
+        h2 {
+          @media #{$lg-device, $md-device, $sm-device} {
+            @include font-noline(30);
+          }
+          @media #{$xxs-device} {
+            @include font-noline(25);
+          }
+        }
+
+        .btn-transparent {
+          padding: 10px 15px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  // Search Box Style
+  .home-search-box {
+    padding: 50px 15px;
+    @media #{$md-device, $sm-device} {
+      padding: 0 15px 30px;
+    }
+
+    .search-box-form {
+      input {
+        border: none;
+        @include font-noline(70);
+        color: #848484;
+        font-weight: 300;
+        outline: none;
+        text-align: center;
+        width: 100%;
+        display: block;
+
+        @media #{$md-device,$sm-device} {
+          padding: 5px 10px;
+          @include font-noline(40);
+        }
+
+        @media #{$xs-device} {
+          @include font-noline(20);
+        }
+
+        &::placeholder {
+          color: #848484;
+        }
+
+        &::-moz-placeholder {
+          color: #848484;
+        }
+      }
+    }
+  }
+
+  // Product Area Style
+  .products-wrapper {
+    .grid-four {
+      .single-product-wrap {
+        @media #{$lg-device} {
+          max-width: calc(33.333% - 20px);
+          @include flex(0 0 calc(33.333% - 20px));
+        }
+      }
+    }
+  }
+}
+
+//Start Single Product Banner Wrapper index12
+.single-product-banner-wrapper {
+  .single-product-banner-area {
+    height: 100vh;
+
+    &.bg-1 {
+      background-image: url("../img/product-banner/single-product-banner-2.jpg");
+    }
+
+    &.bg-3 {
+      background-image: url("../img/product-banner/single-product-banner-3.jpg");
+    }
+
+    &.bg-4 {
+      background-image: url("../img/product-banner/single-product-banner-4.jpg");
+    }
+  }
+}

@@ -1,0 +1,742 @@
+/*===============================
+Typography Style Start
+================================*/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  @include font-size($font-size-base);
+  font-weight: 400;
+  font-family: $font-family-base;
+  color: $black-soft;
+  overflow-x: hidden;
+}
+
+a {
+  @include transition(0.4s);
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $brand-color;
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-weight: 700;
+  font-family: $font-family-base;
+  color: $black-soft;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+strong, b {
+  font-weight: 700;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  @include box-shadow(none);
+  @include transition(0.4s);
+
+  &:active, &:focus {
+    outline: none;
+    @include box-shadow(none);
+  }
+}
+
+// Button Style
+.btn {
+  border: none;
+  @include transition(0.4s);
+  padding: 20px 25px;
+  @include font-noline(13);
+  text-transform: capitalize;
+  @include border-radius(0);
+
+  &:active, &:focus {
+    outline: none;
+    @include box-shadow(none);
+  }
+
+  i.fa {
+    margin-right: 5px;
+  }
+
+  &.btn-small {
+    padding: 8px 20px;
+  }
+
+  &.btn-full {
+    width: 100%;
+  }
+
+  &.btn-round {
+    @include border-radius(50%);
+    padding: 0;
+    line-height: 40px;
+    height: 40px;
+    width: 40px;
+
+    i.fa {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  &.btn-semi-round {
+    @include border-radius(100px);
+  }
+
+  &.btn-brand {
+    background-color: $brand-color;
+    color: $white;
+
+    &:hover {
+      background-color: $brand-color-dark;
+    }
+  }
+
+  &.btn-black {
+    background-color: $black-soft;
+    color: $white;
+
+    &:hover {
+      background-color: $brand-color;
+    }
+  }
+
+  &.btn-transparent {
+    background-color: transparent;
+    border: 1px solid $brand-color;
+    color: $black-soft;
+
+    &:hover {
+      background-color: $brand-color;
+      color: $white;
+    }
+  }
+}
+
+// Product Quantity Increment & Decrement
+.pro-qty {
+  border: 1px solid #e7e7e7;
+  display: inline-block;
+  position: relative;
+  height: 40px;
+  width: 100px;
+
+  input {
+    font-weight: 400;
+    @include font-size(14);
+    text-align: center;
+    padding: 0 40px 0 15px;
+    outline: none;
+    width: 100%;
+    border: none;
+    height: 100%;
+  }
+
+  a {
+    color: $black;
+    font-weight: normal;
+    @include font-noline(14);
+    position: absolute;
+    text-align: center;
+    border-left: 1px solid #e7e7e7;
+    height: 50%;
+    right: 0;
+    width: 25px;
+    line-height: 33px;
+
+    &:hover {
+      color: $brand-color;
+    }
+
+    &.inc {
+      top: 0;
+      border-bottom: 1px solid #e7e7e7;
+    }
+
+    &.dec {
+      bottom: 0;
+    }
+  }
+}
+
+// Responsive Table Scrollbar Style
+.table-responsive, .list {
+  &::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    border: 0;
+    background-color: $brand-color;
+  }
+
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 5px;
+    @include bg-rgba($brand-color, 0.3);
+  }
+
+}
+
+// Nice Select Menu Style
+.nice-select {
+  @include border-radius(0px);
+  float: none;
+  height: auto;
+  text-transform: capitalize;
+  line-height: inherit;
+  padding: 8px 30px 8px 15px;
+  width: 200px;
+
+  @media #{$xxs-device,$xs-device} {
+    width: 160px;
+  }
+
+  span.current {
+    font-weight: 600;
+    @include font-noline(13);
+  }
+
+  .list {
+    @include border-radius(0px);
+    width: 100%;
+
+    .option {
+      line-height: 30px;
+      min-height: 30px;
+    }
+  }
+}
+
+// Custom Checkbox Style
+.form-check {
+  padding-left: 0;
+  margin-bottom: 0;
+  display: flex;
+
+  &-input {
+    &[type="checkbox"], &[type="radio"] {
+      outline: none;
+      box-shadow: none;
+      border-radius: 0;
+      margin-left: 0;
+      margin-top: 3px;
+      cursor: pointer;
+      min-width: 13px;
+      min-height: 13px;
+
+      &:focus {
+        border-color: $border-color
+      }
+
+      &:checked {
+        border-color: $brand-color;
+        background-color: $brand-color;
+      }
+    }
+
+    &[type="radio"] {
+      border-radius: 50%;
+    }
+  }
+
+  &-label {
+    color: $black-soft;
+    @include font-noline(14);
+    line-height: 1;
+    padding-left: 10px;
+    cursor: pointer;
+
+    @media #{$xxs-device} {
+      @include font-noline(13);
+    }
+
+    a {
+      color: $black-soft;
+      font-weight: 500;
+
+      &:hover {
+        color: $brand-color;
+      }
+    }
+  }
+}
+
+// Custom Radio Button Style
+//.custom-radio {
+//  label, .custom-control-label {
+//    &:before {
+//      @include border-radius(50%);
+//      height: 14px;
+//      width: 14px;
+//    }
+//
+//    &:after {
+//      background-position: 1px 1px;
+//      background-size: 9px 8px;
+//      left: -13px;
+//      top: 2px;
+//      height: 10px;
+//      width: 10px;
+//    }
+//  }
+//}
+
+// Fieldset Style;
+fieldset {
+  margin-top: 30px;
+
+  legend {
+    border-bottom: 1px solid lighten($gray-color, 20%);
+    color: $black;
+    @include font-size(24);
+    padding-bottom: 10px;
+    text-transform: capitalize;
+  }
+}
+
+// Slick Slider Arrow Style
+.slick-slider {
+  margin-bottom: 0;
+  @include transition(0.4s);
+
+  .slick-slide > div > div,
+  .slick-slide > div > figure {
+    vertical-align: middle;
+  }
+
+  // Slick Arrow Style
+  .slick-arrow {
+    height: 60px;
+    width: 40px;
+    padding: 0;
+    cursor: pointer;
+    background-color: $white;
+    @include border-radius(0);
+    @include transition(0.4s);
+    color: $brand-color;
+    @include font-noline(16);
+    position: absolute;
+    top: 50%;
+    @include translate(0, -50%);
+    left: 0;
+    z-index: 1;
+    @include opacity(0);
+    visibility: hidden;
+    pointer-events: none;
+
+    &.slick-next {
+      left: auto;
+      right: 0;
+    }
+
+    &:hover {
+      background-color: $brand-color;
+      color: $white;
+    }
+
+    * {
+      margin: 0;
+    }
+  }
+
+  // Slick Dots Style
+  .slick-dots {
+    margin-top: 35px;
+    text-align: center;
+    line-height: 1;
+
+    li {
+      border: 1px solid #D4D4D4;
+      background-color: #D4D4D4;
+      @include border-radius(50%);
+      cursor: pointer;
+      display: inline-block;
+      @include transition(0.4s);
+      margin-right: 10px;
+      height: 12px;
+      width: 12px;
+
+      &:hover, &.slick-active {
+        background-color: $black-soft;
+        border-color: $black-soft;
+      }
+
+      button {
+        display: none;
+      }
+    }
+  }
+
+  // Vertical Slick Slider Arrow
+  &.slick-vertical {
+    .slick-arrow {
+      top: 5px;
+      left: 50%;
+      @include translate(-50%, 0);
+
+      &.slick-prev {
+        top: auto;
+        bottom: 10px;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+
+  // After Slick Slider Hover
+  &:hover {
+    .slick-arrow {
+      @include opacity(1);
+      visibility: visible;
+      pointer-events: visible;
+    }
+  }
+}
+
+// Selection Style
+::-moz-selection {
+  color: $white;
+  background: $brand-color;
+}
+
+::selection {
+  color: $white;
+  background: $brand-color;
+}
+
+// Quick View Modal Style
+#quickViewModal {
+  &.modal {
+    display: block !important;
+    @include opacity(0);
+    visibility: hidden;
+    pointer-events: none;
+    z-index: -99;
+
+    &.show {
+      @include opacity(1);
+      visibility: visible;
+      pointer-events: visible;
+      z-index: 9999;
+      -webkit-animation: slideInDown 0.4s forwards;
+      animation: slideInDown 0.4s forwards;
+    }
+
+    .modal-content {
+      border: none;
+      @include border-radius(0);
+    }
+
+    .modal-dialog {
+      max-width: 1140px;
+
+      .modal-body {
+        padding: 0 30px 0 0;
+
+        @media #{$sm-device,$md-device,$lg-device} {
+          padding: 15px;
+        }
+      }
+
+      .close {
+        background-color: $black-soft;
+        color: $white;
+        @include opacity(1);
+        height: 60px;
+        width: 60px;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        z-index: 99;
+        @media #{$sm-device,$md-device,$lg-device,$xlmax-device} {
+          left: auto;
+          right: 0;
+          top: 0;
+          height: 40px;
+          width: 40px;
+        }
+
+        @media #{$lg-device,$xlmax-device} {
+          top: auto;
+          bottom: 100%;
+        }
+      }
+    }
+  }
+}
+
+// Custom Container Fluid
+.container-fluid {
+  padding: 0 80px;
+
+  @media #{$sm-device, $md-device, $lg-device} {
+    padding: 0 15px;
+  }
+}
+
+// Magnific Popup Customize
+.veeraModal {
+  &.mfp-wrap {
+    .mfp-container {
+      padding: 0;
+
+      .mfp-content {
+        padding: 0;
+        width: auto;
+      }
+    }
+  }
+
+  .mfp-close {
+    @include font-noline(50);
+    line-height: 1;
+    @include transition(0.3s);
+    color: $black-soft;
+    position: absolute;
+    top: 30px;
+    right: 50px;
+
+    &:hover {
+      color: $brand-color;
+      @include rotate(90);
+    }
+
+    @media #{$sm-device} {
+      top: 5px;
+      right: 5px;
+      @include font-noline(40);
+    }
+  }
+}
+
+// Page Padding
+.page-padding {
+  padding: 90px 0;
+}
+
+// Section Title
+.section-title-wrap {
+  @include font-size(13);
+  color: #8d8d8d;
+  margin-bottom: 70px;
+  @media #{$sm-device} {
+    margin-bottom: 30px;
+  }
+  @media #{$md-device} {
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    @include font-noline(36);
+    line-height: 1;
+    text-transform: capitalize;
+    font-weight: 400;
+    margin-top: -5px;
+    margin-bottom: 0;
+    position: relative;
+    padding-bottom: 32px;
+    @media #{$sm-device} {
+      @include font-noline(30);
+      padding-bottom: 15px;
+    }
+    @media #{$md-device} {
+      padding-bottom: 20px;
+    }
+
+    &:before {
+      background-color: $brand-color;
+      content: '';
+      position: absolute;
+      @include translate(-50%, 0);
+      left: 50%;
+      bottom: 0;
+      height: 2px;
+      width: 60px;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  // Style Layout Two
+  &.style-two {
+    @include font-size(16);
+    margin-bottom: 68px;
+    @media #{$sm-device} {
+      margin-bottom: 28px;
+    }
+    @media #{$md-device} {
+      margin-bottom: 38px;
+    }
+
+    h2 {
+      font-family: $font-family-playfair;
+      @include font-noline(48);
+      padding-bottom: 17px;
+
+      @media #{$xs-device} {
+        @include font-noline(35);
+      }
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  // Style Layout Three
+  &.style-three {
+    h2 {
+      font-family: $font-family-playfair;
+      @include font-noline(36);
+      padding-bottom: 30px;
+    }
+  }
+}
+
+// Tooltip Style
+.tooltip {
+  .tooltip-inner {
+    @include font-noline(13);
+    line-height: 1;
+    text-shadow: none;
+    padding: 8px 15px 10px;
+    @include border-radius(0);
+  }
+}
+
+// Page Pagination Style
+.page-pagination {
+  ul {
+    line-height: 1;
+
+    li {
+      margin: 0 5px;
+
+      a {
+        border: 1px solid transparent;
+        @include border-radius(50%);
+        color: #848484;
+        @include font-noline(12);
+        text-align: center;
+        display: block;
+        line-height: 40px;
+        height: 40px;
+        width: 40px;
+
+        [class*="dl-icon"] {
+          vertical-align: middle;
+        }
+
+        &.active {
+          border-color: #e7e7e7;
+          color: $black;
+        }
+      }
+    }
+  }
+}
+
+// No Margin Grid
+.no-margin {
+  margin-top: 0 !important;
+
+  [class*="col-"] {
+    & > div {
+      margin: 0 !important;
+    }
+  }
+}
+
+// Magnific Close Button Style
+.video-popup {
+  .mfp-close {
+    background-color: $black-soft;
+    color: $white !important;
+    text-align: center;
+    padding: 0;
+    @include opacity(1);
+    top: 0;
+    left: 100%;
+    right: auto;
+    line-height: 60px;
+    height: 60px;
+    width: 60px;
+    @include transition(0.4s);
+    z-index: 1;
+
+    @media #{$sm-device,$md-device} {
+      bottom: 100%;
+      left: auto;
+      right: 0;
+      top: auto;
+      line-height: 40px;
+      height: 40px;
+      width: 40px;
+    }
+  }
+}
+
+// Customize Bootstrap
+.row {
+  &:not(.g-0) {
+    margin-left: -15px;
+    margin-right: -15px;
+
+    & > * {
+      position: relative;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}
+
+@media #{$xl-device} {
+  .container {
+    max-width: 1140px;
+  }
+}

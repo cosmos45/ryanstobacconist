@@ -1,0 +1,112 @@
+/*=========================================
+Start Spacial Offers Product Area
+=============================================*/
+.special-content-wrap {
+  margin-top: -30px;
+}
+
+.single-special-product {
+  margin-top: 30px;
+
+  .single-product-wrap {
+    .product-hvr-content {
+      .prod-btn-group {
+        right: auto;
+        left: 50%;
+        @include translate(-50%, 0);
+
+        a, span {
+          display: inline-block;
+          margin-bottom: 0;
+          margin-right: 10px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    .product-details {
+      position: relative;
+
+      .product-prices {
+        position: absolute;
+        right: 30px;
+        top: -23px;
+        @include translate(0, -50%);
+        z-index: 3;
+        @media #{$sm-device,$lg-device} {
+          top: -30px;
+          right: 15px;
+        }
+
+        .price {
+          background-color: $brand-color;
+          color: $white;
+          @include font-noline(18);
+          text-align: center;
+          display: table-cell;
+          vertical-align: middle;
+          @include border-radius(50%);
+          line-height: 1;
+          margin-bottom: 0;
+          height: 90px;
+          width: 90px;
+
+          @media #{$sm-device,$md-device,$lg-device} {
+            @include font-noline(13);
+            height: 60px;
+            width: 60px;
+          }
+
+          span {
+            @include font-noline(12);
+            display: block;
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/// Sale Countdown Style Here
+.sale-countdown-wrap {
+  margin-top: 20px;
+
+  .sale-countdown {
+    @include flexbox();
+    @include justify-content(center);
+
+    .countdown-item {
+      margin-right: 45px;
+      @media #{$sm-device,$lg-device} {
+        margin-right: 20px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      span {
+        display: block;
+
+        &.countdown-time {
+          @include font-noline(30);
+          line-height: 1;
+          font-weight: 500;
+
+          @media #{$sm-device} {
+            @include font-noline(20);
+          }
+        }
+
+        &.countdown-label {
+          color: #8d8d8d;
+          @include font-noline(13);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,180 @@
+/*========================================
+Start Home Banner Wrapper // index13
+=========================================*/
+.single-home-banner-wrap {
+  .home-banner-content {
+    max-width: 470px;
+    margin: auto;
+    color: #8d8d8d;
+
+    @media #{$md-device, $sm-device} {
+      padding: 0 15px;
+    }
+
+    @media #{$sm-device} {
+      margin-top: 23px;
+    }
+
+    h2 {
+      font-weight: 300;
+      @include font-noline(36);
+      line-height: 1.2;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+
+      @media #{$md-device, $sm-device} {
+        @include font-noline(30);
+        margin-bottom: 15px;
+      }
+
+      @media #{$xxs-device} {
+        @include font-noline(20);
+        font-weight: 500;
+      }
+
+    }
+
+    .btn {
+      padding: 20px 60px;
+      margin-top: 25px;
+      @media #{$md-device, $sm-device} {
+        padding: 15px 30px;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  // Responsive Order Manage
+  &:nth-child(2n) {
+    @media #{$sm-device} {
+      [class*="col-md-6"] {
+        order: 2;
+
+        &:last-child {
+          order: 1;
+        }
+      }
+    }
+  }
+
+  &:nth-child(1n + 2) {
+    @media #{$sm-device} {
+      margin-top: 50px;
+    }
+  }
+}
+
+// Home Banner Layout Two
+.layout-two {
+  .single-home-banner-wrap {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-top: 0;
+    height: 100vh;
+
+    @media #{$xs-device} {
+      height: auto;
+      padding: 80px 0;
+    }
+
+    // Background Images
+    &.bg-1 {
+      background-image: url('../img/banner/home14/h14-banner-1.jpg');
+    }
+
+    &.bg-2 {
+      background-image: url('../img/banner/home14/h14-banner-2.jpg');
+    }
+
+    &.bg-3 {
+      background-image: url('../img/banner/home14/h14-banner-3.jpg');
+    }
+
+    &.bg-4 {
+      background-image: url('../img/banner/home14/h14-banner-4.jpg');
+    }
+
+    .container, .row {
+      height: 100%;
+    }
+
+    .home-banner-content {
+      margin-top: 0;
+      max-width: 100%;
+
+      h4 {
+        text-transform: uppercase;
+        color: $white;
+        @include font-noline(20);
+        line-height: 1.2;
+        letter-spacing: 2px;
+        margin-bottom: 6px;
+
+        @media #{$xs-device} {
+          @include font-noline(16);
+          font-weight: 600;
+        }
+
+      }
+
+      h2 {
+        text-transform: capitalize;
+        color: $white;
+        @include font-noline(140);
+        line-height: 1;
+        margin-bottom: 54px;
+
+        @media #{$md-device} {
+          @include font-noline(80);
+          margin-bottom: 30px;
+        }
+
+        @media #{$sm-device} {
+          @include font-noline(50);
+          margin-bottom: 20px;
+        }
+
+        @media #{$xxs-device} {
+          @include font-noline(30);
+        }
+      }
+
+      .btn {
+        background-color: $white;
+        color: $black-soft;
+
+        &:hover {
+          background-color: $brand-color;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .two-column-banner {
+    .single-home-banner-wrap {
+      background-attachment: scroll;
+
+      .home-banner-content {
+        h2 {
+          @include font-noline(110);
+          margin-bottom: 26px;
+
+          @media #{$xlmax-device,$lg-device,$md-device} {
+            @include font-noline(80);
+          }
+
+          @media #{$sm-device} {
+            @include font-noline(50);
+          }
+
+          @media #{$xxs-device} {
+            @include font-noline(30);
+          }
+        }
+      }
+    }
+  }
+}

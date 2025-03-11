@@ -1,0 +1,84 @@
+/*===============================
+Start Page Header Wrapper
+================================*/
+.page-header-wrapper {
+  background-color: #fff9f9;
+  padding: 80px 0 78px;
+  @media #{$md-device} {
+    padding: 60px 0;
+  }
+  @media #{$sm-device} {
+    padding: 50px 0;
+  }
+
+  .page-header-content {
+    h2 {
+      font-weight: 400;
+      @include font-noline(36);
+      margin-top: -7px;
+
+      @media #{$xs-device} {
+        @include font-noline(22);
+      }
+    }
+
+    .page-breadcrumb {
+      ul {
+        li {
+          position: relative;
+
+          &:after {
+            content: "/";
+            @include font-noline(10);
+            margin: 0 10px;
+          }
+
+          &:last-child {
+            &:after {
+              display: none;
+            }
+          }
+
+          a {
+            @include font-noline(12);
+            color: #8d8d8d;
+
+            &:hover, &.active {
+              color: $black-soft;
+            }
+
+            &.active {
+              pointer-events: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Layout Two Style
+  &.layout-two {
+    background-image: url(../img/my-account-bgtitle.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    .page-header-content {
+      h2 {
+        color: $white;
+      }
+
+      .page-breadcrumb {
+        color: $white;
+
+        a {
+          color: $white;
+
+          &.active {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}

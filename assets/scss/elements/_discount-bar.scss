@@ -1,0 +1,82 @@
+/*===============================
+Start Header Sale Discount Bar
+================================*/
+.header-discount-bar {
+  background-color: $brand-color;
+  border: none;
+  color: $white;
+  @include font-size(13);
+  @include border-radius(0);
+  font-weight: 300;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  padding: 20px 0;
+
+  @media #{$xs-device} {
+    padding: 10px;
+    @include font-size(11);
+  }
+
+  @media #{$sm-device, $md-device} {
+    padding: 10px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: $white;
+    font-weight: 600;
+
+    &:hover {
+      color: $black-soft;
+    }
+  }
+
+  .close-button-wrap {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    margin-top: -11px;
+
+    @media #{$sm-device} {
+      right: 5px;
+    }
+
+    .close {
+      color: $white;
+      text-shadow: none;
+      font-weight: 300;
+      @include opacity(1);
+      @include font-noline(22);
+      line-height: 1;
+    }
+  }
+
+  &.layout-two {
+    background-color: #bdfbe1;
+    padding: 10px;
+    color: $black-soft;
+    letter-spacing: normal;
+    @include font-noline(14);
+    font-weight: 500;
+    text-transform: capitalize;
+
+    .btn {
+      border-radius: 5px;
+      margin-left: 15px;
+      font-weight: 400;
+
+      &:hover {
+        background-color: $black-soft;
+        color: $white;
+      }
+    }
+
+    .close {
+      color: $black;
+    }
+  }
+}

@@ -1,0 +1,325 @@
+/*===============================
+Start Shop Page Wrapper
+================================*/
+
+/* Start Product Config Area */
+.product-config-area {
+  @include font-size(14);
+
+  ul {
+    li {
+      color: #8d8d8d;
+
+      a, button {
+        color: #8d8d8d;
+      }
+    }
+  }
+
+  .product-config-left {
+    p {
+      margin-bottom: 0;
+      color: $black-soft;
+    }
+
+    .product-show-quantity {
+      margin-left: 50px;
+
+      @media #{$xs-device} {
+        margin-left: 0;
+      }
+
+      li {
+        margin-right: 15px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        a {
+          padding-bottom: 2px;
+
+          &:hover {
+            color: $black-soft;
+          }
+
+          &.active {
+            color: $black-soft;
+            border-bottom: 1px solid $black-soft;
+          }
+        }
+      }
+    }
+  }
+
+  .product-config-right {
+    ul {
+      & > li {
+        display: inline-block;
+      }
+
+      &.product-view-mode {
+        margin-right: 30px;
+        @include font-noline(18);
+
+        li {
+          margin-right: 5px;
+          cursor: pointer;
+          @include transition(0.4s);
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          &.active, &:hover {
+            color: $black-soft;
+          }
+        }
+      }
+
+      &.product-filter-sort {
+        li {
+          margin-left: 15px;
+
+          &:first-child {
+            margin-left: 0;
+          }
+
+          &.sort-by {
+            .dropdown-nav {
+              left: auto;
+              right: 0;
+              padding: 10px;
+              margin-top: 15px;
+              width: auto;
+              white-space: nowrap;
+
+              &:after {
+                content: '';
+                height: 15px;
+                width: 100%;
+                position: absolute;
+                bottom: 100%;
+              }
+
+              li {
+                display: block;
+                margin: 0;
+
+                a {
+                  @include font-noline(13);
+                  display: block;
+                  padding: 8px;
+
+                  &.active, &:hover {
+                    background-color: $black-soft;
+                    color: $white;
+                  }
+                }
+              }
+            }
+          }
+
+          .arrow-toggle {
+            &.arrow-rotate {
+              &:after {
+                @include rotate(180);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Start Product Filter Item Area */
+.product-filter-item-wrapper {
+  display: none;
+
+  .product-filter-content {
+    @include box-shadow(0 0 32px 0 rgba(0, 0, 0, 0.05));
+    margin-top: 20px;
+    padding: 36px 40px;
+
+    @media #{$md-device} {
+      padding: 30px 15px;
+    }
+  }
+
+  .single-filter-item-wrap {
+    position: relative;
+
+    &:after {
+      background-color: #d4d4d4;
+      content: '';
+      display: none;
+      position: absolute;
+      top: 0;
+      right: -15px;
+      height: 100%;
+      width: 1px;
+
+      @media #{$md-device} {
+        display: block;
+      }
+    }
+
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+
+    &:nth-child(1n + 2) {
+      @media #{$sm-device} {
+        margin-top: 40px;
+      }
+    }
+
+    .filter-item-title {
+      font-weight: 600;
+      @include font-noline(18);
+      line-height: 1;
+      margin-bottom: 27px;
+    }
+  }
+}
+
+// Filter List Style
+.filter-item-list {
+  li {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: #8d8d8d;
+      @include font-noline(14);
+      line-height: 1;
+      text-transform: capitalize;
+
+      &:hover, &.active {
+        color: $brand-color;
+      }
+    }
+  }
+}
+
+// Color Filter Style
+.color-filter {
+  li {
+    position: relative;
+
+    &:before {
+      background-color: #D4D4D4;
+      @include border-radius(50%);
+      content: '';
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: middle;
+      height: 15px;
+      width: 15px;
+    }
+
+    &.black {
+      &:before {
+        background-color: $black;
+      }
+    }
+
+    &.blue {
+      &:before {
+        background-color: $navy;
+      }
+    }
+
+    &.pink {
+      &:before {
+        background-color: $pink;
+      }
+    }
+
+    &.violet {
+      &:before {
+        background-color: $violet;
+      }
+    }
+
+    &.orange {
+      &:before {
+        background-color: $orange;
+      }
+    }
+  }
+}
+
+// Size Checkbox Style
+.spurs-checkbox {
+  li {
+    a {
+      position: relative;
+      @include transition(0.05s);
+
+      &:before {
+        content: '';
+        border: 1px solid #848484;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+        height: 12px;
+        width: 12px;
+        @include transition(0.05s);
+      }
+
+      &:after {
+        content: "\f00c";
+        font-family: $font-font_awesome;
+        position: absolute;
+        left: 1px;
+        @include font-noline(9);
+        line-height: 1;
+        top: 50%;
+        @include translate(0, -50%);
+        @include opacity(0);
+        @include transition(0.05s);
+        visibility: hidden;
+      }
+
+      &:hover, &.active {
+        &:before {
+          border-color: $brand-color;
+          @include transition(0.05s);
+        }
+
+        &:after {
+          @include opacity(1);
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
+
+// Shop Instagram Style Here
+
+.snptwdgt-rtd__ftr, .crd-cta-blck {
+  display: none;
+}
+
+.snptico-shopping-bag {
+  background-color: $black-soft !important;
+  font-size: 16px !important;
+  line-height: 30px !important;
+  height: 50px;
+  width: 50px;
+
+  @media #{$sm-device} {
+    font-size: 10px !important;
+    line-height: 15px !important;
+    height: 30px;
+    width: 30px;
+  }
+}
