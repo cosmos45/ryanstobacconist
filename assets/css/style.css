@@ -1,19 +1,19 @@
 /*------------------------------------------------------------------
 [Table of contents ]
     1.  Theme Typography Style Start
-	2.  Start Header Area
-		2.1 - Header Two
-		2.2 - Header Three
-		2.3 - Header Five
-		2.4 - Header Seven
-		2.5 - Header Eight
-	3.  Start Preloader Wrap
-	4.  Start Page Header Wrapper
-	5.  Start Navigation // Main Menu Style
-	6.  Start Search box Wrapper
-	7.  Start Mini Cart Wrapper
-	8.  Start Left Offside Menu Wrapper
-	9.  Off Canvas Main Menu Start
+    2.  Start Header Area
+        2.1 - Header Two
+        2.2 - Header Three
+        2.3 - Header Five
+        2.4 - Header Seven
+        2.5 - Header Eight
+    3.  Start Preloader Wrap
+    4.  Start Page Header Wrapper
+    5.  Start Navigation // Main Menu Style
+    6.  Start Search box Wrapper
+    7.  Start Mini Cart Wrapper
+    8.  Start Left Offside Menu Wrapper
+    9.  Off Canvas Main Menu Start
    10.  Start Special Categories Banner
    11.  Start Slider Categories Area
    12.  Products Style Here
@@ -52,18 +52,36 @@
 /*===============================
 Typography Style Start
 ================================*/
+@import url('https://fonts.googleapis.com/css2?family=Din+Neuzeit+Grotesk:wght@300;400;500;600;700&display=swap');
+@font-face {
+  font-family: 'Din Neuzeit Grotesk';
+  src: url('path/to/DinNeuzeitGrotesk.woff2') format('woff2'),
+       url('path/to/DinNeuzeitGrotesk.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+.tobacconist-logo {
+  max-width: 120px;
+  margin: 0 0 0 auto;
+  display: block;
+}
+
 html {
   font-size: 62.5%;
 }
-
 body {
   font-size: 1.6rem;
   line-height: 1.5;
   font-weight: 400;
-  font-family: "Poppins", sans-serif;
+  font-family: "Din Neuzeit Grotesk", sans-serif;
   color: #262626;
   overflow-x: hidden;
 }
+
 
 a {
   -webkit-transition: 0.4s 0.2s ease-out;
@@ -93,9 +111,10 @@ h5,
 h6,
 .h6 {
   font-weight: 700;
-  font-family: "Poppins", sans-serif;
+  font-family: "Din Neuzeit Grotesk", sans-serif;
   color: #262626;
 }
+
 
 ul {
   margin: 0;
@@ -112,10 +131,26 @@ strong, b {
 figure {
   margin: 0;
 }
-
 img {
   max-width: 100%;
+  /* Remove this line: padding-left: 200px; */
+  display: block;
+  margin: 0 auto; /* Center the image horizontally */
+  height: auto; /* Maintain aspect ratio */
 }
+.logo-area {
+  text-align: center;
+  max-width: 300px;
+  margin: 0 auto;
+  display: block;
+}
+.logo-area img {
+  max-width: 100%;
+  height: auto;
+  margin-right: 0;
+  margin-left: auto;
+}
+
 
 button {
   background-color: transparent;
@@ -606,7 +641,7 @@ fieldset legend {
   }
 }
 .section-title-wrap.style-two h2 {
-  font-family: "Playfair Display", serif;
+  font-family: "Din Neuzeit Grotesk", Arial, Helvetica, sans-serif;
   font-size: 4.8rem;
   padding-bottom: 17px;
 }
@@ -619,7 +654,7 @@ fieldset legend {
   display: none;
 }
 .section-title-wrap.style-three h2 {
-  font-family: "Playfair Display", serif;
+  font-family: "Din Neuzeit Grotesk", Arial, Helvetica, sans-serif;
   font-size: 3.6rem;
   padding-bottom: 30px;
 }
@@ -713,8 +748,9 @@ fieldset legend {
 Start Header Area
 ==============================*/
 .header-content-wrapper {
-  padding: 30px 0;
+  padding: 10px 0;
   position: relative;
+  overflow: visible;
 }
 .header-content-wrapper .header-left-area, .header-content-wrapper .header-right-area {
   -webkit-box-flex: 0 0 20%;
@@ -1112,12 +1148,12 @@ Header Five
   right: auto;
 }
 .header-five .header-five-middle-area {
-  padding: 48px 0 15px;
-  position: relative;
+  padding: 15px 0 10px;
+  overflow: visible;
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .header-five .header-five-middle-area {
-    padding: 20px 0 25px;
+    padding: 15px 0;
   }
 }
 @media only screen and (max-width: 767.98px) {
@@ -2235,7 +2271,14 @@ Off Canvas Main Menu Start
 }
 
 .slider-area-wrapper {
-  overflow: hidden;
+  margin-top: 20px;
+  overflow: visible;
+}
+.slider-area-wrapper img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 .slider-area-wrapper .tp-caption.LA-BTN-OUTLINE-Black,
 .slider-area-wrapper .LA-BTN-OUTLINE-Black {
@@ -2394,9 +2437,10 @@ Start Special Categories Banner
   }
 }
 .special-category-banner .special-category-header .special-cate-header-content {
-  font-family: "Playfair Display", serif;
+  font-family: "Din Neuzeit Grotesk", sans-serif;
   line-height: 2;
 }
+
 .special-category-banner .special-category-header .special-cate-header-content img {
   margin-bottom: 33px;
 }
@@ -2597,7 +2641,7 @@ Start Special Categories Banner
   transform: translate(45%, -50%);
 }
 .special-category-banner.layout-five .banner-cate-name a.category-name {
-  font-family: "Playfair Display", serif;
+  font-family: "Din Neuzeit Grotesk", Arial, Helvetica, sans-serif;
   font-size: 3.6rem;
   font-weight: 700;
   color: #fff;
@@ -3952,7 +3996,7 @@ Start Testimonial Area
 .testimonial-area-wrapper .testimonial-content-wrapper .single-testimonial-wrap {
   font-size: 2.6rem;
   line-height: 1.5;
-  font-family: "Playfair Display", serif;
+  font-family: "Din Neuzeit Grotesk", Arial, Helvetica, sans-serif;
 }
 @media only screen and (max-width: 767.98px) {
   .testimonial-area-wrapper .testimonial-content-wrapper .single-testimonial-wrap {
@@ -3967,7 +4011,7 @@ Start Testimonial Area
   font-size: 1.3rem;
   line-height: 1;
   font-weight: 400;
-  font-family: "Poppins", sans-serif;
+  font-family: "Din Neuzeit Grotesk", Arial, Helvetica, sans-serif;
   margin-top: 30px;
 }
 .testimonial-area-wrapper .testimonial-content-wrapper .single-testimonial-wrap .client-name .client-type {
@@ -4040,7 +4084,7 @@ Start We Love Fashion Banner
   color: #8d8d8d;
 }
 .love-fashion-text h2 {
-  font-family: "Playfair Display", serif;
+  font-family: "Din Neuzeit Grotesk", Arial, Helvetica, sans-serif;
   font-size: 6.4rem;
   line-height: 1.2;
   font-weight: 400;
@@ -4084,7 +4128,7 @@ Start We Love Fashion Banner
 Start Header Sale Discount Bar
 ================================*/
 .header-discount-bar {
-  background-color: #d25b5b;
+  background-color: #000000;
   border: none;
   color: #fff;
   font-size: 1.3rem;
@@ -5071,14 +5115,14 @@ Start Single Blog Page Wrapper
 .single-blog-content .blockquote p, .single-blog-content blockquote p {
   font-size: 2rem;
   line-height: 1.5;
-  font-family: "Playfair Display", serif;
+  font-family: "Din Neuzeit Grotesk", Arial, Helvetica, sans-serif;
 }
 .single-blog-content .blockquote .blockquote-footer, .single-blog-content blockquote .blockquote-footer {
   font-size: 1.4rem;
   color: #262626;
 }
 .single-blog-content .blockquote .blockquote-footer cite, .single-blog-content blockquote .blockquote-footer cite {
-  font-family: "Playfair Display", serif;
+  font-family: "Din Neuzeit Grotesk", Arial, Helvetica, sans-serif;
   color: #555;
 }
 
